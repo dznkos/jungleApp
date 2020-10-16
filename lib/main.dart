@@ -28,22 +28,24 @@ class MyApp extends StatelessWidget {
                 },            
               )
             ),
+            SizedBox(height: 10,),
             Container(
-              height: 200,
+              height: 250,
               width: double.infinity,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return Container(
-                    width: 100,
-                    height: 100,
+                    width: 300,
+                    height: 200,
                     child: Icon(Icons.access_time),
                     color: Colors.blueAccent,
                   );
                 },            
               )
             ),
+            SizedBox(height: 10,),
             Container(
               height: 100,
               width: double.infinity,
@@ -55,7 +57,7 @@ class MyApp extends StatelessWidget {
                     width: 100,
                     height: 100,
                     child: Icon(Icons.access_time),
-                    color: Colors.blueAccent,
+                    color: Colors.purple,
                   );
                 },            
               )
