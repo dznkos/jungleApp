@@ -20,7 +20,7 @@ class PageMain extends StatelessWidget {
           )
         ],
       ),
-      bottomNavigationBar: _bottomNavigationBar(context),
+      //bottomNavigationBar: _bottomNavigationBar(context),
     );
   }
 
@@ -32,16 +32,16 @@ class PageMain extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Pizzeria Martucci', style: TextStyle( color: Colors.white, fontSize: 30.0, fontWeight: FontWeight.bold )),
+            //Text('Pizzeria Martucci', style: TextStyle( color: Colors.white, fontSize: 30.0, fontWeight: FontWeight.bold )),
             SizedBox( height: 10.0 ),
-            Text('Classify this transaction into a particular category', style: TextStyle( color: Colors.white, fontSize: 18.0 )),
+            //Text('Classify this transaction into a particular category', style: TextStyle( color: Colors.white, fontSize: 18.0 )),
           ],
         ),
       ),
     );
   }
 
-  Widget _bottomNavigationBar(BuildContext context){
+/*   Widget _bottomNavigationBar(BuildContext context){
 
     return Theme(
         data: Theme.of(context).copyWith(
@@ -68,5 +68,6 @@ class PageMain extends StatelessWidget {
             ]
         )
     );
-  }
+  } */
+
 }
