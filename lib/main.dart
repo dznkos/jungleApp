@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Shopify App',
-      initialRoute: 'menu',
+      initialRoute: '/',
       routes: {
         '/'       : (_) => HomePage(),
         'menu'    : (_) => MenuPage(),
