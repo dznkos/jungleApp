@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jungle_app/pages/login_page.dart';
 import 'package:jungle_app/pages/shopcart_page.dart';
 import 'package:jungle_app/pages/home_page.dart';
 import 'package:jungle_app/pages/menu_page.dart';
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Shopify App',
       initialRoute: '/',
       routes: {
-        '/'       : (_) => HomePage(),
+        '/'       : (_) => LoginPage(),
+        'home'    : (_) => HomePage(),
         'menu'    : (_) => MenuPage(),
         'carrito' : (_) => ShopCartPage(),
       }, 

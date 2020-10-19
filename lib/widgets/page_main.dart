@@ -32,7 +32,7 @@ class PageMain extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            //Text('Pizzeria Martucci', style: TextStyle( color: Colors.white, fontSize: 30.0, fontWeight: FontWeight.bold )),
+            Text('Pizza 888', style: TextStyle( color: Colors.white, fontSize: 30.0, fontWeight: FontWeight.bold )),
             SizedBox( height: 10.0 ),
             //Text('Classify this transaction into a particular category', style: TextStyle( color: Colors.white, fontSize: 18.0 )),
           ],
