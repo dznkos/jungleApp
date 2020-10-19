@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jungle_app/bloc/provider.dart';
@@ -15,11 +17,25 @@ class RegistroPage extends StatelessWidget {
     //final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      body: Stack(
-              children: [
+      body: Stack(          
+        children: [
+              Image.asset("assets/login.jpg", 
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              fit: BoxFit.cover),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                  child: Container(
+                    color: Colors.orange.withOpacity(0.1),
+                  ),              
+                ),
+              ),
                 _loginForm(context),
 
-              ]
+        ]
       ),
     );
   }
