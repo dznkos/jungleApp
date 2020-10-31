@@ -12,7 +12,6 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.transparent,
-        elevation: 0.0,
         actions: [
           IconButton(
             icon: Icon(Icons.search),
@@ -28,6 +27,14 @@ class HomePage extends StatelessWidget {
       body: Stack(
         children: [
           FondoPizza(),
+          SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                imgporCategoria(context),
+              ],
+            ),
+          )
         ],
       ),
       drawer: Drawer(
@@ -62,5 +69,27 @@ class HomePage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget imgporCategoria(BuildContext context) {
+    return Container(
+        margin: EdgeInsets.symmetric(vertical: 15),
+        height: MediaQuery.of(context).size.height * 0.3,
+        width: double.infinity,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.purple,
+              ),
+              margin: EdgeInsets.all(10),
+              width: MediaQuery.of(context).size.width * 0.8,
+              child: Icon(Icons.image),
+            );
+          },
+        ));
   }
 }
