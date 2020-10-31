@@ -13,6 +13,16 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.shopping_cart),
+            onPressed: () {},
+          )
+        ],
       ),
       extendBodyBehindAppBar: true,
       body: Stack(
