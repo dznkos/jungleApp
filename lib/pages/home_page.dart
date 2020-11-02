@@ -29,8 +29,9 @@ class HomePage extends StatelessWidget {
           FondoPizza(),
           SafeArea(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                categoriasButtons(),
                 imgporCategoria(context),
               ],
             ),
@@ -71,9 +72,87 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget categoriasButtons() {
+    return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: ToggleButtons(
+          children: [
+            FlatButton(
+              shape: StadiumBorder(),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Pizzas",
+              ),
+            ),
+            FlatButton(
+              shape: StadiumBorder(),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Veg",
+              ),
+            ),
+            FlatButton(
+              shape: StadiumBorder(),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Spicy",
+              ),
+            ),
+            FlatButton(
+              shape: StadiumBorder(),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Combo",
+              ),
+            ),
+            FlatButton(
+              shape: StadiumBorder(),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Veg",
+              ),
+            ),
+            FlatButton(
+              shape: StadiumBorder(),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Spicy",
+              ),
+            ),
+            FlatButton(
+              shape: StadiumBorder(),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Combo",
+              ),
+            )
+          ],
+          isSelected: [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+          ],
+          //borderRadius: BorderRadius.circular(25),
+          //borderWidth: 5,
+          borderColor: Colors.white,
+          //selectedBorderColor: Colors.cyan,
+        ));
+  }
+
   Widget imgporCategoria(BuildContext context) {
     return Container(
-        margin: EdgeInsets.symmetric(vertical: 15),
+        margin: EdgeInsets.symmetric(vertical: 5),
         height: MediaQuery.of(context).size.height * 0.3,
         width: double.infinity,
         child: ListView.builder(
