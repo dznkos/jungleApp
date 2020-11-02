@@ -74,11 +74,13 @@ class HomePage extends StatelessWidget {
 
   Widget categoriasButtons() {
     return SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 10),
         scrollDirection: Axis.horizontal,
         child: ToggleButtons(
           children: [
             FlatButton(
-              shape: StadiumBorder(),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
               color: Colors.white70,
               onPressed: () {},
               child: Text(
@@ -86,7 +88,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
             FlatButton(
-              shape: StadiumBorder(),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
               color: Colors.white70,
               onPressed: () {},
               child: Text(
@@ -94,7 +97,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
             FlatButton(
-              shape: StadiumBorder(),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
               color: Colors.white70,
               onPressed: () {},
               child: Text(
@@ -102,7 +106,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
             FlatButton(
-              shape: StadiumBorder(),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
               color: Colors.white70,
               onPressed: () {},
               child: Text(
@@ -110,7 +115,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
             FlatButton(
-              shape: StadiumBorder(),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
               color: Colors.white70,
               onPressed: () {},
               child: Text(
@@ -118,7 +124,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
             FlatButton(
-              shape: StadiumBorder(),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
               color: Colors.white70,
               onPressed: () {},
               child: Text(
@@ -126,7 +133,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
             FlatButton(
-              shape: StadiumBorder(),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
               color: Colors.white70,
               onPressed: () {},
               child: Text(
@@ -169,6 +177,92 @@ class HomePage extends StatelessWidget {
               child: Icon(Icons.image),
             );
           },
+        ));
+  }
+
+  Widget categorias2Buttons() {
+    return SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        scrollDirection: Axis.horizontal,
+        child: ToggleButtons(
+          children: [
+            FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Pizzas",
+              ),
+            ),
+            FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Veg",
+              ),
+            ),
+            FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Spicy",
+              ),
+            ),
+            FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Combo",
+              ),
+            ),
+            FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Veg",
+              ),
+            ),
+            FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Spicy",
+              ),
+            ),
+            FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              color: Colors.white70,
+              onPressed: () {},
+              child: Text(
+                "Combo",
+              ),
+            )
+          ],
+          isSelected: [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+          ],
+          //borderRadius: BorderRadius.circular(25),
+          //borderWidth: 5,
+          borderColor: Colors.white,
+          //selectedBorderColor: Colors.cyan,
         ));
   }
 }
