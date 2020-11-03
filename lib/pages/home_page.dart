@@ -201,7 +201,7 @@ class HomePage extends StatelessWidget {
               color: Colors.white70,
               onPressed: () {},
               child: Text(
-                "Veg",
+                "Promos",
               ),
             ),
             FlatButton(
@@ -210,25 +210,7 @@ class HomePage extends StatelessWidget {
               color: Colors.white70,
               onPressed: () {},
               child: Text(
-                "Spicy",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Combo",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Veg",
+                "Cheese",
               ),
             ),
             FlatButton(
