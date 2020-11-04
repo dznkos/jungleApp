@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:jungle_app/widgets/fondo_pizza.dart';
 import 'package:jungle_app/widgets/page_main.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -185,6 +190,18 @@ class HomePage extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 10),
         scrollDirection: Axis.horizontal,
         child: ToggleButtons(
+          isSelected: isSelected,
+          onPressed: (index) {
+            setState(() {
+              for (int indexBtn = 0; indexBtn < isSelected.length; indexBtn++) {
+                if (indexBtn == index) {
+                  isSelected[indexBtn] = true;
+                } else {
+                  isSelected[indexBtn] = false;
+                }
+              }
+            });
+          },
           children: [
             FlatButton(
               shape: RoundedRectangleBorder(
