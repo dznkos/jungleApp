@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jungle_app/widgets/categoria_titulo.dart';
+import 'package:jungle_app/widgets/categoria_general.dart';
+import 'package:jungle_app/widgets/categoria_pizza.dart';
 import 'package:jungle_app/widgets/fondo_pizza.dart';
 import 'package:jungle_app/widgets/page_main.dart';
 
@@ -41,6 +42,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 categoriasButtons(),
                 imgporCategoria(context),
+                categoriasGeneral()
               ],
             ),
           )
@@ -85,19 +87,28 @@ class _HomePageState extends State<HomePage> {
       padding: EdgeInsets.symmetric(horizontal: 10),
       scrollDirection: Axis.horizontal,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           CategoriaTitulo(
             title: "Pizzas",
             color: Colors.teal,
           ),
+          SizedBox(
+            width: 5,
+          ),
           CategoriaTitulo(
             title: "Vegan",
             color: Colors.greenAccent,
           ),
+          SizedBox(
+            width: 5,
+          ),
           CategoriaTitulo(
             title: "Spicy",
             color: Colors.red,
+          ),
+          SizedBox(
+            width: 5,
           ),
           CategoriaTitulo(
             title: "Mini",
@@ -130,71 +141,40 @@ class _HomePageState extends State<HomePage> {
         ));
   }
 
-  Widget categorias2Buttons() {
+  Widget categoriasGeneral() {
     return SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        scrollDirection: Axis.horizontal,
-        child: ToggleButtons(
-          children: [
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Pizzas",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Promos",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Cheese",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Spicy",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Combo",
-              ),
-            )
-          ],
-          isSelected: [
-            true,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-          ],
-          //borderRadius: BorderRadius.circular(25),
-          //borderWidth: 5,
-          borderColor: Colors.white,
-          //selectedBorderColor: Colors.cyan,
-        ));
+      padding: EdgeInsets.symmetric(horizontal: 10),
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          CategoriaGeneral(
+            title: "Pizzas",
+            color: Colors.white60,
+          ),
+          SizedBox(
+            width: 15,
+          ),
+          CategoriaGeneral(
+            title: "Pasta",
+            color: Colors.white60,
+          ),
+          SizedBox(
+            width: 15,
+          ),
+          CategoriaGeneral(
+            title: "Wings",
+            color: Colors.white60,
+          ),
+          SizedBox(
+            width: 15,
+          ),
+          CategoriaGeneral(
+            title: "Drinks",
+            color: Colors.white60,
+          ),
+        ],
+      ),
+    );
   }
 }

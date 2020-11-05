@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 class CategoriaTitulo extends StatelessWidget {
   final Color color;
   final String title;
-  final String assetPath;
 
-  const CategoriaTitulo({Key key, this.color, this.title, this.assetPath})
-      : super(key: key);
+  const CategoriaTitulo({Key key, this.color, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +12,7 @@ class CategoriaTitulo extends StatelessWidget {
       color: this.color,
       onPressed: () {},
       shape: StadiumBorder(),
-      child: this.assetPath != null
-          ? Image.asset(this.assetPath)
-          : Center(child: Text(this.title)),
+      child: Center(child: Text(this.title)),
     );
   }
 }
