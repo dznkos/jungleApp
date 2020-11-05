@@ -8,6 +8,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool _hasBeenPressed = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,88 +81,13 @@ class _HomePageState extends State<HomePage> {
 
   Widget categoriasButtons() {
     return SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        scrollDirection: Axis.horizontal,
-        child: ToggleButtons(
-          children: [
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Pizzas",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Veg",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Spicy",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Combo",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Veg",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Spicy",
-              ),
-            ),
-            FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5)),
-              color: Colors.white70,
-              onPressed: () {},
-              child: Text(
-                "Combo",
-              ),
-            )
-          ],
-          isSelected: [
-            true,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-          ],
-          //borderRadius: BorderRadius.circular(25),
-          //borderWidth: 5,
-          borderColor: Colors.white,
-          //selectedBorderColor: Colors.cyan,
-        ));
+      padding: EdgeInsets.symmetric(horizontal: 10),
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[],
+      ),
+    );
   }
 
   Widget imgporCategoria(BuildContext context) {
@@ -190,18 +117,6 @@ class _HomePageState extends State<HomePage> {
         padding: EdgeInsets.symmetric(horizontal: 10),
         scrollDirection: Axis.horizontal,
         child: ToggleButtons(
-          isSelected: isSelected,
-          onPressed: (index) {
-            setState(() {
-              for (int indexBtn = 0; indexBtn < isSelected.length; indexBtn++) {
-                if (indexBtn == index) {
-                  isSelected[indexBtn] = true;
-                } else {
-                  isSelected[indexBtn] = false;
-                }
-              }
-            });
-          },
           children: [
             FlatButton(
               shape: RoundedRectangleBorder(
