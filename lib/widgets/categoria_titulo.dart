@@ -10,22 +10,13 @@ class CategoriaTitulo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 90,
-          height: 70,
-          decoration: BoxDecoration(
-              color: this.color, borderRadius: BorderRadius.circular(10)),
-          child: this.assetPath != null ? Image.asset(this.assetPath) : null,
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        Text(
-          this.title,
-        )
-      ],
+    return FlatButton(
+      color: this.color,
+      onPressed: () {},
+      shape: StadiumBorder(),
+      child: this.assetPath != null
+          ? Image.asset(this.assetPath)
+          : Center(child: Text(this.title)),
     );
   }
 }

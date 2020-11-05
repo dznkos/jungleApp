@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jungle_app/widgets/categoria_titulo.dart';
 import 'package:jungle_app/widgets/fondo_pizza.dart';
 import 'package:jungle_app/widgets/page_main.dart';
 
@@ -85,7 +86,24 @@ class _HomePageState extends State<HomePage> {
       scrollDirection: Axis.horizontal,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[],
+        children: <Widget>[
+          CategoriaTitulo(
+            title: "Pizzas",
+            color: Colors.teal,
+          ),
+          CategoriaTitulo(
+            title: "Vegan",
+            color: Colors.greenAccent,
+          ),
+          CategoriaTitulo(
+            title: "Spicy",
+            color: Colors.red,
+          ),
+          CategoriaTitulo(
+            title: "Mini",
+            color: Colors.indigo,
+          ),
+        ],
       ),
     );
   }
