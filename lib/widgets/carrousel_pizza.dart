@@ -14,14 +14,16 @@ class CarrouselPizza extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        margin: EdgeInsets.symmetric(horizontal: 20),
         child: CarouselSlider(
-      options: CarouselOptions(),
-      items: imgList
-          .map((item) => Container(
-                child: Center(
-                    child: Image.network(item, fit: BoxFit.cover, width: 1000)),
-              ))
-          .toList(),
-    ));
+          options: CarouselOptions(),
+          items: imgList
+              .map((item) => Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(50)),
+                    child: Image.network(item, fit: BoxFit.cover, width: 1000),
+                  ))
+              .toList(),
+        ));
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jungle_app/widgets/carrousel_pizza.dart';
 import 'package:jungle_app/widgets/categoria_general.dart';
 import 'package:jungle_app/widgets/categoria_pizza.dart';
 import 'package:jungle_app/widgets/fondo_pizza.dart';
@@ -42,7 +43,8 @@ class _HomePageState extends State<HomePage> {
               children: [
                 categoriasButtons(),
                 imgporCategoria(context),
-                categoriasGeneral()
+                categoriasGeneral(),
+                CarrouselPizza()
               ],
             ),
           )
