@@ -19,7 +19,7 @@ class CategoriaGeneral extends StatelessWidget {
               color: this.color, borderRadius: BorderRadius.circular(10)),
           child: this.assetPath != null
               ? Image.asset(this.assetPath)
-              : Center(child: Text('Hola')),
+              : Icon(Icons.local_pizza),
         ),
         SizedBox(
           height: 5,
