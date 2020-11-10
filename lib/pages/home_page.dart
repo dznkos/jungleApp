@@ -161,28 +161,28 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           CategoriaGeneral(
             title: "Pizzas",
-            color: Colors.white60,
+            color: Colors.red,
           ),
           SizedBox(
             width: 15,
           ),
           CategoriaGeneral(
             title: "Pasta",
-            color: Colors.white60,
+            color: Colors.red,
           ),
           SizedBox(
             width: 15,
           ),
           CategoriaGeneral(
             title: "Wings",
-            color: Colors.white60,
+            color: Colors.red,
           ),
           SizedBox(
             width: 15,
           ),
           CategoriaGeneral(
             title: "Drinks",
-            color: Colors.white60,
+            color: Colors.red,
           ),
         ],
       ),

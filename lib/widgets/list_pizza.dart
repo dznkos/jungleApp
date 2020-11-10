@@ -57,14 +57,14 @@ class ListPizza extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(
+            Container(
+              height: sizeH * .2,
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.keyboard_arrow_right),
-                    color: Colors.grey,
+                    icon: Icon(Icons.add),
+                    color: Colors.red,
                     iconSize: 22,
                     onPressed: () {
                       buildShowModalBottomSheet(context);
@@ -109,7 +109,8 @@ class ListPizza extends StatelessWidget {
                         color: Colors.grey, fontWeight: FontWeight.bold),
                   ),
                 ),
-                Row( // button Size
+                Row(
+                  // button Size
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Column(
@@ -237,8 +238,10 @@ class ListPizza extends StatelessWidget {
                       ],
                     ),
                   ],
-                ),// end tamaños pizza
-                SizedBox(height: 20,),
+                ), // end tamaños pizza
+                SizedBox(
+                  height: 20,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -266,8 +269,7 @@ class ListPizza extends StatelessWidget {
         });
   }
 
-  Widget bottomsheetpizza (BuildContext context) {
-
+  Widget bottomsheetpizza(BuildContext context) {
     final sizeW = MediaQuery.of(context).size.width;
     final sizeH = MediaQuery.of(context).size.height;
 
@@ -303,8 +305,7 @@ class ListPizza extends StatelessWidget {
                   SizedBox(
                     height: 5,
                   ),
-                  Text('S/ 99.99',
-                      style: TextStyle(color: Colors.orange[800])),
+                  Text('S/ 99.99', style: TextStyle(color: Colors.orange[800])),
                   // incompleto mostrar mas texto en scroll
                   SizedBox(
                     height: 10,
@@ -312,7 +313,7 @@ class ListPizza extends StatelessWidget {
                   Text(' Pizza francesa, Ham, Cheese, Pepper', softWrap: true),
                 ],
               ),
-            ),            
+            ),
           ],
         ),
       ),
