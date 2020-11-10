@@ -10,12 +10,12 @@ class CategoriaTitulo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return MaterialButton(
       color: this.color,
       onPressed: () {
         Navigator.pushNamed(context, route);
       },
-      shape: BeveledRectangleBorder(),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Center(child: Text(this.title)),
     );
   }

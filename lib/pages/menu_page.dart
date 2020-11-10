@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jungle_app/widgets/categoria_pizza.dart';
 import 'package:jungle_app/widgets/list_pizza.dart';
 
 class MenuPage extends StatelessWidget {
@@ -14,6 +15,7 @@ class MenuPage extends StatelessWidget {
       body: Container(
           child: ListView(
         children: [
+          categoriasButtons(),
           ListPizza(
               'Cheese Pizza',
               'Descripcion pizza, Descripcion pizza, Descripcion pizza',
@@ -47,6 +49,43 @@ class MenuPage extends StatelessWidget {
               'Japan Pizza', 'Descripcion pizza, Descripcion pizza', 22.99, ''),
         ],
       )),
+    );
+  }
+
+  Widget categoriasButtons() {
+    return SingleChildScrollView(
+      padding: EdgeInsets.symmetric(horizontal: 10),
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          CategoriaTitulo(
+            title: "Pizzas",
+            color: Colors.red,
+          ),
+          SizedBox(
+            width: 5,
+          ),
+          CategoriaTitulo(
+            title: "Vegan",
+            color: Colors.red,
+          ),
+          SizedBox(
+            width: 5,
+          ),
+          CategoriaTitulo(
+            title: "Spicy",
+            color: Colors.red,
+          ),
+          SizedBox(
+            width: 5,
+          ),
+          CategoriaTitulo(
+            title: "Mini",
+            color: Colors.red,
+          ),
+        ],
+      ),
     );
   }
 }

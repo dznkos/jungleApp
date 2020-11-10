@@ -92,8 +92,8 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           CategoriaTitulo(
-            title: "Pizzas",
-            color: Colors.teal,
+            title: "Meat",
+            color: Colors.white,
             route: 'menu',
           ),
           SizedBox(
@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
           ),
           CategoriaTitulo(
             title: "Vegan",
-            color: Colors.greenAccent,
+            color: Colors.white,
             route: 'home',
           ),
           SizedBox(
@@ -109,14 +109,21 @@ class _HomePageState extends State<HomePage> {
           ),
           CategoriaTitulo(
             title: "Spicy",
-            color: Colors.red,
+            color: Colors.white,
           ),
           SizedBox(
             width: 5,
           ),
           CategoriaTitulo(
             title: "Mini",
-            color: Colors.indigo,
+            color: Colors.white,
+          ),
+          SizedBox(
+            width: 5,
+          ),
+          CategoriaTitulo(
+            title: "Extra",
+            color: Colors.white,
           ),
         ],
       ),
