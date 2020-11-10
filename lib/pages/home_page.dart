@@ -94,6 +94,7 @@ class _HomePageState extends State<HomePage> {
           CategoriaTitulo(
             title: "Pizzas",
             color: Colors.teal,
+            route: 'menu',
           ),
           SizedBox(
             width: 5,
@@ -101,6 +102,7 @@ class _HomePageState extends State<HomePage> {
           CategoriaTitulo(
             title: "Vegan",
             color: Colors.greenAccent,
+            route: 'home',
           ),
           SizedBox(
             width: 5,
